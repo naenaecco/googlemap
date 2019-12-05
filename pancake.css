@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+body{font-family: 'メイリオ',
+    'Hiragino kaku Gothic Pro',sans-serif}
+
+/*私なりのCSSリセット*/
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0}
+
+li {list-style: none}
+
+a {text-decoration: none}
+
+/*クリアフィックス*/
+.cf::after{content: "";
+    display: table;
+    clear: both}
+
+.contentsBox{width: 100%;
+    min-height: 100%;
+    background: url(images/bodyBg.jpg) repeat;
+    position: relative}
+
+/*コンテンツ幅の固定*/
+.headerInner{width: 960px;
+    margin: 0 auto}
+
+/*ヘッダー*/
+header{width: 100%;
+    height:150px;
+    background: url(images/headerBg.png) repeat-X;
+    border-bottom: 5px solid #f2bcbc;
+    position: fixed;
+    top: 0;
+    z-index: 100}
+
+.boxa {
+    float:left;
+    padding-top: 50px}
+
+/*グローバルナビゲーション*/
+.boxb{float: left;
+    padding-top:50px}
+
+.boxb ul{background: url("images/navBg.png") no-repeat left bottom;
+    margin-left:80px}
+
+.boxb li a img{
+    display: block;
+    padding-left: 40px}
+
+/*後で消すよ！*/
+.boxb li a:hover{
+    background-color: #eeeeee}
+
+/*リングの文字数に合わせた横幅にするためにwidthはauto*/
+.boxb li{float: left;
+    width: auto}
+
+.boxb ul::after{
+    content: "";
+    display: block;
+    clear: both}
+
+/*スクロールが開始されるとヘッダーを半透明にするCSS*/
+.fixed{opacity:0.7;}
+
+/*メイン*/
+.main{width: 100%;
+    height: 565px;
+    background: url(images/mainBg.png) repeat-x;
+    margin-top: 155px}/*ヘッダーの高さ分のマージン*/
+
+.mainInner{width: 960px;
+    height: 555px;
+    margin: 0 auto;
+    position: relative;
+    }
+
+/*bxSliderのCSS*/
+.bx-viewport{height: 500px !important}
+
+
+.bx-prev{display: block;
+    width: 35px;
+    height: 45px;
+    background: url(images/preImage.png) no-repeat center center;
+    position: absolute;
+    left: 0;
+    top:225px;
+    z-index: 2;
+    opacity: 1}
+
+.bx-prev:hover {opacity: 0.7}
+
+.bxslider{width: 890px;
+    height: 480px;
+    display: block;
+    margin-left: 35px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1}
+
+
+.bxslider li {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+
+.bx-next {
+	display: block;
+	width: 35px;
+	height: 45px;
+	background: url('../images/nextImage.png') no-repeat center center;
+	position: absolute;
+	right: 0;
+	top: 255px;
+	z-index: 2;
+	opacity: 1;
+}
+
+.bx-next:hover {
+	opacity: 0.7;
+}
+
+.bx-pager {
+	width: 90px;
+	position: absolute;
+	bottom: 37px;
+	left: 440px;
+}
+
+.bx-pager-item {
+	width: 20px;
+	margin-right: 10px;
+	float: left;
+	opacity: 1;
+}
+
+.bx-pager-item:hover {
+	opacity: 0.9;
+}
+
+.bx-pager-link {
+	display: block;
+	width: 20px;
+	height: 15px;
+	background: url('images/main-off.png') no-repeat center center;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.active {
+	background: url('images/main-on.png') no-repeat center center !important;
+}
+
+/*コンテンツ１*/
+.box1{width: 960px;
+    height: 430px;
+    background: url(images/contents01Bg.png) no-repeat;
+    margin: 80px auto 0;
+    position: relative}
+
+.box1 h2{text-align: center;
+    line-height: 0;
+    margin-bottom: 55px}
+
+.box1 h3{text-align: center;
+    line-height: 0;
+    margin-bottom: 10px}
+
+.content01Img{line-height: 0;
+    position: absolute;
+    bottom:7px;
+    right:1px;
+    z-index: 1}
+
+.text01{color: #4b3a24;
+    font-size:90%;
+    line-height:220%;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2}
+
+.text02{color:#4b3a24;
+    font-size:90%;
+    line-height: 220%;
+    text-align: center;
+    position: relative;
+    z-index: 2}
+
+/*コンテンツ２*/
+.box2{width: 960px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative}
+
+.box2 h2{text-align: center;
+    line-height: 0}
+
+
+.no1{line-height:0;
+    position: absolute;
+    top:40px;
+    left: 60px}
+
+.box2 li{float: left;
+    width: 223px;
+    height: 288px;
+    border: 1px #e3deca solid;
+    background-color: #ffffff;
+    margin-right: 20px;
+    text-align: center;
+   }
+
+.noMargin{margin: 0 !important}
+
+.box2 ul li img{margin-top: 15px;}
+
+.box2 li span{display: block;
+    line-height: 140%;
+    color: #41331f;
+    margin-top: 5px;
+    font-size:90%}
+
+.menuImg1{margin: 20px 0 30px 0}
+
+/*メニューテーブルぅ*/
+.box2 table{font-size:100%;
+    color:#41331f}
+
+
+.heartIcon{background: url(images/heartIcon.png) no-repeat left center;
+padding-left: 20px}
+
+.table1{float: left;
+    width: 465px}
+
+.table2{float: left;
+    margin-left: 30px;
+   width: 465px}
+
+.table1 tr,.table2 tr,.table3,tr{height: 35px}
+
+/*menu下*/
+
+.menuImg2{width: 490px;
+    margin-top: 30px;
+    float:left}
+
+.menuImg2 img{}
+
+.table3{padding: 25px 0 0 5px;
+    float: left}
+
+.note{color: #41331f;
+    font-size: 80%;
+    text-align: right}
+
+
+/*コンテンツ０３*/
+.box3{width: 960px;
+    height: 550px;
+    background: url("images/contents03Bg.png") no-repeat;
+    margin: 0 auto;
+    margin-top: 120px}
+
+.box3 h2{text-align: center;
+    margin-bottom: 10px;
+    line-height: 0}
+
+
+#gallery{width: 450px;
+    margin-left: 30px;
+    line-height: 0;
+    float: left}
+
+#gallery img{position: absolute}
+
+#thumbnail{width: 432px;
+    margin-right: 30px;
+    float: right}
+
+#thumbnail li{float: left;
+    margin: 0 0 10px 12px;
+    line-height: 0;
+    width: 132px}
+
+#map{width: 480px;
+    height: 400px}
