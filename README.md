@@ -1,0 +1,2 @@
+# googlemap
+ピンクのGooglemapが載せたい
